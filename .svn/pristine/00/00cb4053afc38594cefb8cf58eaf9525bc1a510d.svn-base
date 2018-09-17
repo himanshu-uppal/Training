@@ -1,0 +1,28 @@
+-- Exercise 2
+/* Write separate queries using a join, a subquery, a CTE, and then an EXISTS to list all AdventureWorks customers
+   who have not placed an order. */
+USE AdventureWorks;
+
+-- Using Join
+select p.FirstName +' , ' + p.LastName Name ,sc.CustomerID 'Customer ID' from Person.Person p 
+RIGHT JOIN Sales.Customer sc ON p.BusinessEntityID = sc.CustomerID 
+LEFT JOIN Sales.SalesOrderHeader soh ON soh.CustomerID = sc.CustomerID
+WHERE soh.SalesOrderID IS NULL;
+
+--Using Sub query
+select sc.CustomerID from Sales.Customer sc  where sc.CustomerID not in (
+select soh.CustomerID from Sales.SalesOrderHeader soh
+ );
+
+-- Using CTE
+WITH CustomerDetailsCTE AS (select p.FirstName +' , ' + p.LastName Name ,sc.CustomerID 'CustomerID',soh.SalesOrderID from Person.Person p 
+RIGHT JOIN Sales.Customer sc ON p.BusinessEntityID = sc.CustomerID 
+LEFT JOIN Sales.SalesOrderHeader soh ON soh.CustomerID = sc.CustomerID)
+select cdCTE.Name ,cdCTE.CustomerID from CustomerDetailsCTE cdCTE
+WHERE cdCTE.SalesOrderID IS NULL;
+
+
+--Using EXISTS
+select sc.CustomerID from Sales.Customer sc  where NOT EXISTS (
+select soh.CustomerID from Sales.SalesOrderHeader soh where soh.CustomerID = sc.CustomerID
+ );

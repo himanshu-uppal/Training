@@ -1,0 +1,7 @@
+C:\Users\himanshuuppal\source\repos\Week1Assignment3Question2\Week1Assignment3Question2\bin\Debug\Week1Assignment3Question2.exe.config
+C:\Users\himanshuuppal\source\repos\Week1Assignment3Question2\Week1Assignment3Question2\bin\Debug\Week1Assignment3Question2.exe
+C:\Users\himanshuuppal\source\repos\Week1Assignment3Question2\Week1Assignment3Question2\bin\Debug\Week1Assignment3Question2.pdb
+C:\Users\himanshuuppal\source\repos\Week1Assignment3Question2\Week1Assignment3Question2\obj\Debug\Week1Assignment3Question2.csprojAssemblyReference.cache
+C:\Users\himanshuuppal\source\repos\Week1Assignment3Question2\Week1Assignment3Question2\obj\Debug\Week1Assignment3Question2.csproj.CoreCompileInputs.cache
+C:\Users\himanshuuppal\source\repos\Week1Assignment3Question2\Week1Assignment3Question2\obj\Debug\Week1Assignment3Question2.exe
+C:\Users\himanshuuppal\source\repos\Week1Assignment3Question2\Week1Assignment3Question2\obj\Debug\Week1Assignment3Question2.pdb
